@@ -76,6 +76,11 @@ Route::get('/edit-pelatihan-seminar_dosen/{id}', 'PelatihanSeminarDosenControlle
 Route::post('/ubah-pelatihan-seminar_dosen/{id}', 'PelatihanSeminarDosenController@ubah_pelatihan-seminar');
 Route::get('/hapus-pelatihan-seminar_dosen/{id}', 'PelatihanSeminarDosenController@hapus_pelatihan_seminar');
 
+//sekolah vokasi ROutes
 
-
-
+Route::get('/sekolah-vokasi', 'SekolahVokasiController@index');
+Route::post('/sekolah-vokasi-login', 'SekolahVokasiController@login_sekolah_vokasi');
+Route::get('/dashboard-sekolah-vokasi', 'SekolahVokasiController@dashboard_sekolah_vokasi');
+Route::get('/dosen-sekolah-vokasi', 'SekolahVokasiController@dosen_sekolah_vokasi');
+Route::get('/mahasiswa-sekolah-vokasi', 'SekolahVokasiController@mahasiswa_sekolah_vokasi');
+Route::get('/detail-mahasiswa-sekolah-vokasi/{id}', 'SekolahVokasiController@detail_mahasiswa_sekolah_vokasi');
