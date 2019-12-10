@@ -44,6 +44,16 @@ class SekolahVokasiController extends Controller
             ->with('mahasiswa_info', $mahasiswa_info);
     }
 
+    public function detail_dosen_sekolah_vokasi($id)
+    {
+        $dosen_info = DB::table('dosen')
+            ->where('id', $id)
+            ->first();
+
+        return view('sekolah_vokasi.detail_dosen_sekolah_vokasi')
+            ->with('dosen_info', $dosen_info);
+    }
+
     public function login_sekolah_vokasi(Request $request)
     {
         $email = $request->email;

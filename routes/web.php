@@ -98,3 +98,4 @@ Route::get('/dashboard-sekolah-vokasi', 'SekolahVokasiController@dashboard_sekol
 Route::get('/dosen-sekolah-vokasi', 'SekolahVokasiController@dosen_sekolah_vokasi');
 Route::get('/mahasiswa-sekolah-vokasi', 'SekolahVokasiController@mahasiswa_sekolah_vokasi');
 Route::get('/detail-mahasiswa-sekolah-vokasi/{id}', 'SekolahVokasiController@detail_mahasiswa_sekolah_vokasi');
+Route::get('/detail-dosen-sekolah-vokasi/{id}', 'SekolahVokasiController@detail_dosen_sekolah_vokasi');
