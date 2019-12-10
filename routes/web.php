@@ -37,6 +37,44 @@ Route::get('/hapus-keahlian/{id}', 'KeahlianController@hapus_keahlian');
 Route::get('/pelatihan-seminar', 'PelatihanSeminarController@index');
 Route::get('/tambah-pelatihan-seminar', 'PelatihanSeminarController@tambah_pelatihan_seminar');
 
+//Dosen Routes.................................
+
+//login
+Route::get('/register-dosen', 'DosenController@register');
+Route::post('/tambah-dosen', 'DosenController@tambah_dosen');
+Route::get('/logindosen', 'DosenController@index');
+Route::post('/dosen-login', 'DosenController@login');
+Route::get('/logout-dosen', 'DosenController@logout');
+Route::get('/dashboard_dosen', 'DosenController@dashboard');
+Route::get('/print_dosen', 'DosenController@print');
+//proyek
+Route::get('/pengalaman-proyek_dosen', 'PengalamanProyekDosenController@index');
+Route::get('/tambah-pengalaman-proyek_dosen', 'PengalamanProyekDosenController@tambah_pengalaman_proyek');
+Route::post('/simpan-pengalaman-proyek_dosen', 'PengalamanProyekDosenController@simpan_pengalaman_proyek');
+Route::get('/edit-pengalaman-proyek_dosen/{id}', 'PengalamanProyekDosenController@edit_pengalaman_proyek');
+Route::post('/ubah-pengalaman-proyek_dosen/{id}', 'PengalamanProyekDosenController@ubah_pengalaman_proyek');
+Route::get('/hapus-pengalaman-proyek_dosen/{id}', 'PengalamanProyekDosenController@hapus_pengalaman_proyek');
+//publikasi
+Route::get('/publikasi', 'PublikasiController@index');
+Route::get('/tambah-publikasi', 'PublikasiController@tambah_publikasi');
+Route::post('/simpan-publikasi', 'PublikasiController@simpan_publikasi');
+Route::get('/edit-publikasi/{id}', 'PublikasiController@edit_publikasi');
+Route::post('/ubah-publikasi/{id}', 'PublikasiController@ubah_publikasi');
+Route::get('/hapus-publikasi/{id}', 'PublikasiController@hapus_publikasi');
+//penghargaan
+Route::get('/penghargaan_dosen', 'PenghargaanDosenController@index');
+Route::get('/tambah-penghargaan_dosen', 'PenghargaanDosenController@tambah_penghargaan_dosen');
+Route::post('/simpan-penghargaan_dosen', 'PenghargaanDosenController@simpan_penghargaan_dosen');
+Route::get('/edit-penghargaan_dosen/{id}', 'PenghargaanDosenController@edit_penghargaan_dosen');
+Route::post('/ubah-penghargaan_dosen/{id}', 'PenghargaanDosenController@ubah_penghargaan_dosen');
+Route::get('/hapus-penghargaan_dosen/{id}', 'PenghargaanDosenController@hapus_penghargaan_dosen');
+//pelatihan
+Route::get('/pelatihan-seminar_dosen', 'PelatihanSeminarDosenController@index');
+Route::get('/tambah-pelatihan-seminar_dosen', 'PelatihanSeminarDosenController@tambah_pelatihan_seminar');
+Route::post('/simpan-pelatihan-seminar_dosen', 'PelatihanSeminarDosenController@simpan_pelatihan_seminar');
+Route::get('/edit-pelatihan-seminar_dosen/{id}', 'PelatihanSeminarDosenController@edit_pelatihan_seminar');
+Route::post('/ubah-pelatihan-seminar_dosen/{id}', 'PelatihanSeminarDosenController@ubah_pelatihan-seminar');
+Route::get('/hapus-pelatihan-seminar_dosen/{id}', 'PelatihanSeminarDosenController@hapus_pelatihan_seminar');
 
 
 
