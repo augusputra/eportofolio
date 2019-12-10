@@ -39,35 +39,34 @@
           <tbody>
 
             <?php
-                $semua_mahasiswa = DB::table('mahasiswa')->get();
+            $semua_mahasiswa = DB::table('mahasiswa')->get();
 
-                foreach($semua_mahasiswa as $key)
-                {
-            ?>
+            foreach ($semua_mahasiswa as $key) {
+              ?>
 
-            <tr>
-              <td>{{$key->nama}}</td>
-              <td>{{$key->nim}}</td>
-              <td>{{$key->angkatan}}</td>
-              <td>{{$key->tahun_masuk}}</td>
-              <td>{{$key->tanggal_lahir}}</td>
-              <td>{{$key->ipk_terakhir}}</td>
-              <td>{{$key->program_keahlian}}</td>
-              <td>{{$key->telp}}</td>
-              <td>{{$key->email}}</td>
-              <td>{{$key->fakultas}}</td>
-              <td>{{$key->foto}}</td>
-              <td>{{$key->created_at}}</td>
-              <td>{{$key->updated_at}}</td>
-              <td>
-              <a href="{{URL::to('/edit-pengalaman-mahasiswa/'.$key->id)}}" class="btn btn-primary btn-icon-split">
-                <span class="text">
-                Lihat
-                </span>
-              </a>
-            </tr>
+              <tr>
+                <td>{{$key->nama}}</td>
+                <td>{{$key->nim}}</td>
+                <td>{{$key->angkatan}}</td>
+                <td>{{$key->tahun_masuk}}</td>
+                <td>{{$key->tanggal_lahir}}</td>
+                <td>{{$key->ipk_terakhir}}</td>
+                <td>{{$key->program_keahlian}}</td>
+                <td>{{$key->telp}}</td>
+                <td>{{$key->email}}</td>
+                <td>{{$key->fakultas}}</td>
+                <td>{{$key->foto}}</td>
+                <td>{{$key->created_at}}</td>
+                <td>{{$key->updated_at}}</td>
+                <td>
+                  <a href="{{URL::to('/detail-mahasiswa-sekolah-vokasi/'.$key->id)}}" class="btn btn-primary btn-icon-split">
+                    <span class="text">
+                      Lihat
+                    </span>
+                  </a>
+              </tr>
 
-                <?php } ?>
+            <?php } ?>
 
           </tbody>
         </table>
