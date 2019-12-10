@@ -38,6 +38,14 @@ Route::get('/pelatihan-seminar', 'PelatihanSeminarController@index');
 Route::get('/tambah-pelatihan-seminar', 'PelatihanSeminarController@tambah_pelatihan_seminar');
 
 
+//sekolah vokasi ROutes
+
+Route::get('/sekolah-vokasi', 'SekolahVokasiController@index');
+Route::post('/sekolah-vokasi-login', 'SekolahVokasiController@login_sekolah_vokasi');
+Route::get('/dashboard-sekolah-vokasi', 'SekolahVokasiController@dashboard_sekolah_vokasi');
+Route::get('/dosen-sekolah-vokasi', 'SekolahVokasiController@dosen_sekolah_vokasi');
+Route::get('/mahasiswa-sekolah-vokasi', 'SekolahVokasiController@mahasiswa_sekolah_vokasi');
+Route::get('/detail-mahasiswa-sekolah-vokasi', 'SekolahVokasiController@detail_mahasiswa_sekolah_vokasi');
 
 
 
