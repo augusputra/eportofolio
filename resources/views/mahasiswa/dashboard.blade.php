@@ -69,11 +69,7 @@
        
       
 		</section>
-		<section>
-			<h3 class="line-title center">About Me</h3>
-			<p class="read">Computers have been my passion from ever. I could spend hours learning about coding and designing. However, this passion got wings when I grabbed a job as a UI/UX designer and developer. Though money cannot be totally ignored, even if it wasn’t there, I couldn’t be separated from designing and coding. I think I can totally relate to how
-</p>
-		</section>
+		
 	   <section>
         <h3 class="line-title center">Skills</h3>
         <ul class="skill-list">
@@ -116,32 +112,80 @@
       </section>
 	</aside>
 	<main>
+	
 		<section>
-			<h3 class="line-title">Objective</h3>
-			<article class="flex-group">
-			
-				<div class="full">
-					
-					<p class="read">I want to execute my ideas through my designing skills for benefit of my company. I have intuitive knowledge of designing which will help me to grow my career with my company.</p>
-				</div>
-			</article>
-		</section>
-			<section>
+		  <h3 class="line-title">Project Completed</h3>
 
-			<h3 class="line-title">Experience <small class="text-muted">(3 years)</small></h3>
+      <?php
+          $pengalaman_proyek_info = DB::table('pengalaman_proyek')->where('mahasiswa_id', Session::get('id'))->get();
+          foreach($pengalaman_proyek_info as $key_proy){
+      ?>
+
+        <article class="flex-group">
+          <div class="short">
+            <h4><a href="">{{ $key_proy->nama_proyek }}</a></h4>
+            <p>{{ $key_proy->kegiatan_matakuliah }} - {{ $key_proy->tahun }}</p>
+          </div>
+          <div class="full">
+          
+            <p class="read">
+            {{ $key_proy->deskripsi }}     
+            </p>
+            <hr class="garis">
+          </div>
+        </article>
+
+      <?php } ?>
+
+		</section>
+
+    <section>
+		  <h3 class="line-title">Training Seminars and Workshops</h3>
+
+      <?php
+          $pelatihan_seminar_info = DB::table('pelatihan_seminar')->where('mahasiswa_id', Session::get('id'))->get();
+          foreach($pelatihan_seminar_info as $key_sem){
+      ?>
+
+        <article class="flex-group">
+          <div class="short">
+            <h4><a href="">{{ $key_sem->nama_kegiatan }}</a></h4>
+            <p>{{ $key_sem->tanggal }} , {{ $key_sem->tempat }}</p>
+          </div>
+          <div class="full">
+          
+            <p class="read">
+            {{ $key_sem->status }}     
+            </p>
+            <a href="{{URL::to('uploads/'.$key_sem->file_sertifikat)}}">{{ $key_sem->file_sertifikat }}</a>
+            <hr class="garis">
+          </div>
+        </article>
+
+      <?php } ?>
+
+		</section>
+    
+    <section>
+
+			<h3 class="line-title">Training Seminars and Workshops</h3>
+      
+      <?php
+          $pelatihan_seminar_info = DB::table('pelatihan_seminar')->where('mahasiswa_id', Session::get('id'))->get();
+          foreach($pelatihan_seminar_info as $key_sem){
+      ?>
 
 			<article class="flex-group">
 
 				<div class="short">
-					<h4>Edunuts.com</h4>
+					<h4>{{ $key_sem->nama_kegiatan }}</h4>
 					<p>
-            Naurang House, 21 KG Marg Connaught Place, New Delhi -110001
+            {{ $key_sem->tanggal }}
          </p><hr class="garis">
          <small>
-          1-1 -2015 to 4-11-2017
+         {{ $key_sem->status }}
            
          </small>
-        <p></p>
 				</div>
 
 				<div class="full">
@@ -152,153 +196,9 @@
 				</div>
 			</article>
 
-
-        <article class="flex-group">
-        <div class="short">
-          <h4>bigly.io</h4>
-          <p>
-            
-            Bigly Technologies Pvt. Ltd.
-            N-21, Sec. 18, Noida, Uttar Pradesh: 201301
-            </p><hr class="garis">
-            <small>
-              
-            November-2017 - Currently
-            </small>
-          <p></p>
-        </div>
-        <div class="full">
-          <a href="http://bigly.io">Lead UI/UX Developer </a>
-          <p class="read">
-            I had worked on two websites, E-Commerce Seller Service Provider &amp; Dropshipping. I had used same skills here to develop the whole business of team Bigly.
-          </p>
-        </div>
-      </article>
+      <?php } ?>
 
 		</section>
-
-
-			<section>
-			<h3 class="line-title">Project Completed</h3>
-  			<article class="flex-group">
-  				<div class="short">
-  					<h4><a href="">Edunuts.com</a></h4>
-  					<p>UI/Design &amp; Developer</p>
-  				</div>
-  				<div class="full">
-  					
-  					<p class="read">
-              Edunuts is a mission to empower students, in making the best career decisions based on correct information and insights from data.     
-            </p>
-             <hr class="garis">
-  				</div>
-  			</article>
-
-        
-        <article class="flex-group">
-          <div class="short">
-            <h4><a href="">bigly.io</a></h4>
-            <p>UI/Design &amp; Developer</p>
-          </div>
-          <div class="full">
-            
-            <p class="read">
-              bigly.io is India's First platform to Import Products at  Online Store without Keeping Inventory.
-            </p>
-            <hr class="garis">
-          </div>
-        </article>
-
-          <article class="flex-group">
-          <div class="short">
-            <h4><a href="">bigradar.io</a></h4>
-            <p>UI/Design &amp; Developer</p>
-          </div>
-          <div class="full">
-            
-            <p class="read">
-              
-           BigRadar is a subsidiary company of Edunuts.com. I had done all the previous work here too by using Html5, Css3, Jquery, Javascript, Animate.css, Bootstrap.css &amp; Parallax. Js.
-
-
-            </p>
-          <hr class="garis">
-          </div>
-        </article>
-
-        <article class="flex-group">
-          <div class="short">
-            <h4><a href="http://www.edunuts.com/academy/">Edunuts Academy</a></h4>
-            <p>UI/Design &amp; Developer</p>
-          </div>
-          <div class="full">
-            <p class="read">
-              
-           Edunuts Academy is a subsidiary company of Edunuts.com. I had done all the previous work here too by using Html5, Css3, Jquery, Javascript, Animate.css, Bootstrap.css  
-
-
-            </p>
-          <hr class="garis">
-          </div>
-        </article>
-
-         <article class="flex-group">
-          <div class="short">
-            <h4><a href="http://www.sketchut.com/">Sketchut</a></h4>
-            <p>UI/Design &amp; Developer</p>
-          </div>
-          <div class="full">
-            <p class="read">
-              </p><h1>&nbsp;</h1>
-            <p></p>
-          <hr class="garis">
-          </div>
-        </article>
-
-  
-        <article class="flex-group">
-          <div class="short">
-            <h4><a href="http://www.dmadelhi.com/">DMA Delhi</a></h4>
-            <p>UI/Design &amp; Developer</p>
-          </div>
-          <div class="full">
-            <p class="read">
-              
-            dmadelhi.com is a subsidiary company of Edunuts.com. I had done all the previous work here too by using Html5, Css3, Jquery, Javascript, Animate.css, Bootstrap.css &amp; Parallax. Js.
-
-            </p>
-          <hr class="garis">
-          </div>
-        </article>
-       
-        <article class="flex-group">
-          <div class="short">
-            <h4><a href="http://dropship.bigly.io">Bigly Dropship</a></h4>
-
-            <p>UI/Design &amp; Developer</p>
-          </div>
-          <div class="full">
-            <p class="read">
-              </p><h1>&nbsp;</h1>
-            <p></p>
-          <hr class="garis">
-          </div>
-        </article>
-
-        <article class="flex-group">
-          <div class="short">
-            <h4><a href="http://finishit.in">Finishit.in</a></h4>
-
-            <p>UI/Design &amp; Developer</p>
-          </div>
-          <div class="full">
-            <p class="read">When you don't know how to get things done,come to us Finish-It get things done for you,over a call or chat. It does a great job by making your life easier</p>
-          <hr class="garis">
-          </div>
-        </article>
-
-		</section>
-
     
 	</main>
 </div>

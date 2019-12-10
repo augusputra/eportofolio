@@ -5,9 +5,9 @@
   <!-- DataTales Example -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Pengalaman Proyek</h6>
+      <h6 class="m-0 font-weight-bold text-primary">Pengalaman mahasiswa</h6>
       <br>
-      <a href="{{url('/tambah-pengalaman-proyek')}}" class="btn btn-primary btn-icon-split">
+      <a href="{{url('/tambah-pengalaman-mahasiswa')}}" class="btn btn-primary btn-icon-split">
         <span class="icon text-white-50">
           <i class="fas fa-flag"></i>
         </span>

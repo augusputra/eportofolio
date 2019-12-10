@@ -36,9 +36,6 @@ Route::get('/hapus-keahlian/{id}', 'KeahlianController@hapus_keahlian');
 
 Route::get('/pelatihan-seminar', 'PelatihanSeminarController@index');
 Route::get('/tambah-pelatihan-seminar', 'PelatihanSeminarController@tambah_pelatihan_seminar');
-
-//Dosen Routes.................................
-
 //login
 Route::get('/register-dosen', 'DosenController@register');
 Route::post('/tambah-dosen', 'DosenController@tambah_dosen');
@@ -77,6 +74,23 @@ Route::post('/ubah-pelatihan-seminar_dosen/{id}', 'PelatihanSeminarDosenControll
 Route::get('/hapus-pelatihan-seminar_dosen/{id}', 'PelatihanSeminarDosenController@hapus_pelatihan_seminar');
 
 //sekolah vokasi ROutes
+Route::post('/simpan-pelatihan-seminar', 'PelatihanSeminarController@simpan_pelatihan_seminar');
+Route::get('/edit-pelatihan-seminar/{id}', 'PelatihanSeminarController@edit_pelatihan_seminar');
+Route::post('/ubah-pelatihan-seminar/{id}', 'PelatihanSeminarController@ubah_pelatihan_seminar');
+Route::get('/hapus-pelatihan-seminar/{id}', 'PelatihanSeminarController@hapus_pelatihan_seminar');
+
+Route::get('/penghargaan', 'PenghargaanController@index');
+Route::get('/tambah-penghargaan', 'PenghargaanController@tambah_penghargaan');
+Route::post('/simpan-penghargaan', 'PenghargaanController@simpan_penghargaan');
+Route::get('/edit-penghargaan/{id}', 'PenghargaanController@edit_penghargaan');
+Route::post('/ubah-penghargaan/{id}', 'PenghargaanController@ubah_penghargaan');
+Route::get('/hapus-penghargaan/{id}', 'PenghargaanController@hapus_penghargaan');
+
+Route::get('/pengalaman-organisasi', 'PengalamanOrganisasiController@index');
+Route::get('/tambah-pengalaman-organisasi', 'PengalamanOrganisasiController@tambah_pengalaman_organisasi');
+Route::post('/simpan-pengalaman-organisasi', 'PengalamanOrganisasiController@simpan_pengalaman_organisasi');
+Route::get('/edit-pengalaman-organisasi/{id}', 'PengalamanOrganisasiController@edit_pengalaman_organisasi');
+Route::post('/ubah-pengalaman-organisasi/{id}', 'PengalamanOrganisasiController@ubah_pengalaman_organisasi');
 
 Route::get('/sekolah-vokasi', 'SekolahVokasiController@index');
 Route::post('/sekolah-vokasi-login', 'SekolahVokasiController@login_sekolah_vokasi');

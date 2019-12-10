@@ -100,7 +100,7 @@ color: var(--theme-color);
     font-size: 22px;
         font-weight: 300;
         text-decoration: none;
-        margin-top: 20px;
+        margin-top: -2px;
         display: block;
         color: #525252;
 }
