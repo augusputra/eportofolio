@@ -5,9 +5,9 @@
   <!-- DataTales Example -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Pelatihan Seminar dan Workshop</h6>
+      <h6 class="m-0 font-weight-bold text-primary">Penghargaan</h6>
       <br>
-      <a href="{{url('/tambah-pelatihan-seminar')}}" class="btn btn-primary btn-icon-split">
+      <a href="{{url('/tambah-penghargaan')}}" class="btn btn-primary btn-icon-split">
         <span class="icon text-white-50">
           <i class="fas fa-flag"></i>
         </span>
@@ -20,9 +20,8 @@
           <thead>
             <tr>
               <th>Nama Kegiatan</th>
-              <th>Tanggal Kegiatan</th>
-              <th>Tempat Pelaksanaan</th>
-              <th>Status</th>
+              <th>Deskripsi</th>
+              <th>Tahun Kegiatan</th>
               <th>File Sertifikat</th>
               <th>Aksi</th>
             </tr>
@@ -31,33 +30,32 @@
           <tbody>
 
             <?php
-                $semua_pelatihan = DB::table('pelatihan_seminar')->get();
+                $semua_penghargaan = DB::table('penghargaan')->get();
 
-                foreach($semua_pelatihan as $key)
+                foreach($semua_penghargaan as $key)
                 {
             ?>
 
             <tr>
               <td>{{$key->nama_kegiatan}}</td>
-              <td>{{$key->tanggal}}</td>
-              <td>{{$key->tempat}}</td>
-              <td>{{$key->status}}</td>
+              <td>{{$key->deskripsi}}</td>
+              <td>{{$key->tahun}}</td>
               <td>
                   <a href="{{URL::to('uploads/'.$key->file_sertifikat)}}">
                     {{$key->file_sertifikat}}
                   </a>
               </td>
               <td>
-              <a href="{{URL::to('/edit-pelatihan-seminar/'.$key->id)}}" class="btn btn-primary btn-icon-split">
+                <a href="{{URL::to('/edit-penghargaan/'.$key->id)}}" class="btn btn-primary btn-icon-split">
+                    <span class="text">
+                        <i class="fas fa-edit"></i>
+                    </span>
+                </a>
+                <a href="{{URL::to('/hapus-penghargaan/'.$key->id)}}" class="btn btn-danger btn-icon-split">
                 <span class="text">
-                    <i class="fas fa-edit"></i>
-                </span>
-              </a>
-              <a href="{{URL::to('/hapus-pelatihan-seminar/'.$key->id)}}" class="btn btn-danger btn-icon-split">
-              <span class="text">
-                    <i class="fas fa-trash"></i>
-                </span>
-              </a>
+                        <i class="fas fa-trash"></i>
+                    </span>
+                </a>
               </td>
             </tr>
 

@@ -16,35 +16,28 @@
     @if ($errors->has('tanggal') || $errors->has('file_sertifikat'))
       <div class="alert alert-danger">
         <button type="button" class="close" data-dismiss="alert">×</button> 
-          <strong>Pelatihan Seminar dan Workshop gagal ditambah</strong>
+          <strong>Penghargaan gagal ditambah</strong>
       </div>
     @endif
 
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Pelatihan Seminar dan Workshop</h6>
+      <h6 class="m-0 font-weight-bold text-primary">Penghargaan</h6>
     </div>
     <div class="card-body">
       <div class="table-responsive">
-      <form method="post" action="{{asset('/simpan-pelatihan-seminar')}}" enctype="multipart/form-data">
+      <form method="post" action="{{asset('/simpan-penghargaan')}}" enctype="multipart/form-data">
         {{ csrf_field() }}
         <div class="form-group">
             <label for="exampleInputEmail1">Nama Kegiatan</label>
             <input type="text" class="form-control" id="exampleInputEmail1" name="nama_kegiatan" required>
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">Tanggal Kegiatan</label>
-            <input type="date" class="form-control" id="exampleInputEmail1" name="tanggal" required>
+            <label for="exampleFormControlTextarea1">Deskripsi Proyek</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="deskripsi" required></textarea>
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">Tempat Pelaksanaan</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="tempat" required>
-        </div>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Status</label>
-            <select name="status" class="form-control" id="exampleFormControlSelect1">
-              <option value="Panitia">Panitia</option>
-              <option value="Peserta">Peserta</option>
-            </select>
+            <label for="exampleInputEmail1">Tahun Kegiatan</label>
+            <input type="number" class="form-control" id="exampleInputEmail1" name="tahun" required>
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">File Sertifikat</label><br>
