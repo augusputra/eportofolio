@@ -34,7 +34,7 @@ class PengalamanProyekController extends Controller
         $pengalamanproyek->mahasiswa_id = $request->mahasiswa_id;
         $pengalamanproyek->save();
 
-        return Redirect()->back()->with(['success' => 'Penglaman Proyek berhasil ditambah']);
+        return Redirect()->back()->with(['success' => 'Pengalaman Proyek berhasil ditambah']);
     }
 
     public function edit_pengalaman_proyek($id)
@@ -59,7 +59,7 @@ class PengalamanProyekController extends Controller
         $pengalamanproyek->mahasiswa_id = $id;
         $pengalamanproyek->save();
 
-        return Redirect()->back()->with(['success' => 'Penglaman Proyek berhasil diubah']);
+        return Redirect()->back()->with(['success' => 'Pengalaman Proyek berhasil diubah']);
     }
 
     public function hapus_pengalaman_proyek($id)
